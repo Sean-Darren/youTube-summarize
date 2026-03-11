@@ -10,7 +10,7 @@ def summarize_youtube_video(youtube_url, language='en'):
         print(f"Channel: {channel}")
 
         print("\nExtracting transcripts...")
-        transcript = extractTranscripts(video_id)
+        transcript = extractTranscripts(video_id, language)
 
         if transcript:
             #Summarize the Content

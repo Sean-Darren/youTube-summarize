@@ -2,12 +2,15 @@ import os
 from openai import OpenAI
 
 def summarizeVideo(text, lang='en'):
-    api_key = os.getenv("OPENAI_API_KEY");
+    # api_key = os.getenv("OPENAI_API_KEY");
 
-    if not api_key:
-        return "Summarization unavailable - no OpenAI API key provided";
+    # if not api_key:
+    #     return "Summarization unavailable - no OpenAI API key provided";
     
-    client = OpenAI(api_key=api_key);
+    client = OpenAI(
+        base_url="http://localhost:11434/v1",
+        api_key="ollama",  
+    )
     
     prompt = f'''Following text is in the original language from the video. Provide the output in this language: {lang}.
     Format the output as follows:
@@ -24,13 +27,8 @@ def summarizeVideo(text, lang='en'):
     Input text: {text}'''
 
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
+        model="llama3.2",
+        messages=[{"role": "user", "content": prompt}],
     )
 
     return response.choices[0].message.content
