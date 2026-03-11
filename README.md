@@ -1,7 +1,7 @@
 # YouTube Video Summarizer
 
 Easily generate concise summaries and key points for any YouTube video!  
-This tool extracts video metadata, fetches English transcripts, and uses OpenAI to summarize the content—making it perfect for quick reviews or note-taking.
+This tool extracts video metadata, fetches English transcripts, and uses Ollama to summarize the content—making it perfect for quick reviews or note-taking.
 
 ---
 
@@ -14,14 +14,13 @@ This tool extracts video metadata, fetches English transcripts, and uses OpenAI 
   Retrieves and compiles English subtitles (if available) for accurate summarization.
 
 - **Generates Summaries with Key Points**  
-  Uses OpenAI to produce a brief summary, bullet-pointed key points, and a conclusion—all in your chosen language.
+  Uses Ollama Model to produce a brief summary, bullet-pointed key points, and a conclusion—all in your chosen language.
 
 ---
 
 ## 🚀 Usage
 **1. Install Dependencies**: `pip install -r requirements.txt`  
-**2. Set API Key**: `export OPENAI_API_KEY="your-api-key"`  
-**3. Run**: `python main.py`  
+**2. Run**: `python main.py`
 
 You will be prompted to enter:
 - The YouTube video URL
