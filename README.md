@@ -30,7 +30,7 @@ You will be prompted to enter:
 - Extracts Video ID from your YouTube URL
 - Fetches Title & Channel using BeautifulSoup
 - Downloads English Transcripts with youtube-transcript-api
-- Generates Summaries using OpenAI’s GPT models
+- Generates Summaries using Ollama models
   
 ## ⚠️ Requirements
 - Python 3.7+
