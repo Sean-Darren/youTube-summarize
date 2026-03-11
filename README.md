@@ -34,7 +34,6 @@ You will be prompted to enter:
   
 ## ⚠️ Requirements
 - Python 3.7+
-- OpenAI API Key
 - All Python dependencies from requirements.txt
 
 ## 🤝 Contributions
